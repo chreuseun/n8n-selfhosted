@@ -42,11 +42,11 @@ services:
       DB_POSTGRESDB_PASSWORD: ${POSTGRES_PASSWORD}
       GENERIC_TIMEZONE: "UTC"
       N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: "true"
-      N8N_HOST: n8n.flashtide.win
-      N8N_PROTOCOL: https
-      WEBHOOK_URL: https://n8n.flashtide.win/
-      N8N_EDITOR_BASE_URL: https://n8n.flashtide.win/
-      N8N_ENCRYPTION_KEY: Rdksq129f-93323sMKke-02s92OIle
+      # N8N_HOST: n8n.flashtide.win
+      # N8N_PROTOCOL: https
+      # WEBHOOK_URL: https://n8n.flashtide.win/
+      # N8N_EDITOR_BASE_URL: https://n8n.flashtide.win/
+      # N8N_ENCRYPTION_KEY: Rdksq129f-93323sMKke-02s92OIle
     ports:
       - "5678:5678"
     volumes:
