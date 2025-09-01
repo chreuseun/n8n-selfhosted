@@ -5,7 +5,8 @@ services:
     working_dir: /data
     volumes:
       - ./data:/data
-    command: ["tail", "-f", "/dev/null"]  # Fix: Use array format
+    entrypoint: ["/bin/bash"]
+    command: ["-c", "tail -f /dev/null"]
     tty: true
     networks:
       - n8n_shared
