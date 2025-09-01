@@ -8,3 +8,7 @@ services:
     entrypoint: ["sleep", "infinity"]
     networks:
       - n8n_shared
+
+networks:
+  n8n_shared:
+    external: true
