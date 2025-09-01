@@ -5,6 +5,7 @@ services:
     working_dir: /data
     volumes:
       - ./data:/data     # shared with n8n + host
+    entrypoint: ["sleep", "infinity"]
     command: tail -f /dev/null
     networks:
       - n8n_shared
