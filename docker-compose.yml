@@ -7,6 +7,8 @@ volumes:
 networks:
   n8n_private:
     driver: bridge
+  n8n_shared:
+    external: true
 
 services:
   postgres:
@@ -52,7 +54,7 @@ services:
       N8N_USER_MANAGEMENT_DISABLED: ${N8N_USER_MANAGEMENT_DISABLED}
       N8N_EMAIL_MODE: ${N8N_EMAIL_MODE}
       N8N_LOG_LEVEL: ${N8N_LOG_LEVEL}
-            
+
       # Other Settings
       GENERIC_TIMEZONE: ${GENERIC_TIMEZONE}
       N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: ${N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS}
