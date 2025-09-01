@@ -4,11 +4,7 @@ services:
     container_name: ffmpeg
     working_dir: /data
     volumes:
-      - ./data:/data     # shared with n8n + host
+      - ./data:/data
     entrypoint: ["sleep", "infinity"]
     networks:
       - n8n_shared
-
-networks:
-  n8n_shared:
-    external: true
