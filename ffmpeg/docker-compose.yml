@@ -1,0 +1,9 @@
+services:
+  ffmpeg:
+    image: lscr.io/linuxserver/ffmpeg:latest
+    container_name: ffmpeg
+    working_dir: /data
+    volumes:
+      - .:/data
+    entrypoint: ["ffmpeg"]
+    tty: true
