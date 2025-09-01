@@ -1,14 +1,10 @@
 services:
   ffmpeg:
-    image: lscr.io/linuxserver/ffmpeg:latest
+    image: jrottenberg/ffmpeg:5.1-ubuntu
     container_name: ffmpeg
     working_dir: /data
     volumes:
       - ./data:/data
-    entrypoint: ["sleep", "infinity"]
+    command: tail -f /dev/null
     networks:
       - n8n_shared
-
-networks:
-  n8n_shared:
-    external: true
