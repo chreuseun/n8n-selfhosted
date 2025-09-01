@@ -1,12 +1,10 @@
-version: "3.8"
-
 services:
   ffmpeg:
     image: jrottenberg/ffmpeg:5.1-ubuntu
     container_name: ffmpeg
     working_dir: /data
     volumes:
-      - ./data:/data         # shared with host and n8n
+      - ./data:/data
     command: tail -f /dev/null
     tty: true
     networks:
