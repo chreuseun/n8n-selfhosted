@@ -61,6 +61,7 @@ services:
       - "5678:5678"
     volumes:
       - n8n_storage:/home/node/.n8n
+      - ./downloads:/home/node/downloads
     depends_on:
       postgres:
         condition: service_healthy
