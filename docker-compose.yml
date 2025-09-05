@@ -31,7 +31,7 @@ services:
 
   n8n:
     container_name: n8n_app
-    image: docker.n8n.io/n8nio/n8n:latest
+    build: .
     restart: always
     environment:
       # Database Connection
